@@ -1,14 +1,10 @@
-import { Button } from "./components/ui/button"
-import Sidebar from "./components/ui/sidebar"
+import { Button } from "./components/ui/Button"
+import Sidebar from "./components/ui/Sidebar"
+import { AppRouter } from "./router/Router"
 
 function App() {
   return (
-    <>
-    <Sidebar />
-    <div className="flex flex-col items-center justify-center min-h-svh">
-      <Button>Click me</Button>
-    </div>
-    </>
+    <AppRouter/>
   )
 }
 

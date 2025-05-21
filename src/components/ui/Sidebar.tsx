@@ -13,7 +13,7 @@ import {
 
 const menuItems = [
   { label: "Dashboard", icon: <Home size={20} /> },
-  { label: "Uploads", icon: <Upload size={20} />, active: true },
+  { label: "Uploads", icon: <Upload size={20} />, path: "/uploads" },
   { label: "Study", icon: <BookOpen size={20} /> },
   { label: "Quiz", icon: <Lightbulb size={20} /> },
   { label: "Flashcard", icon: <Zap size={20} /> },
@@ -31,17 +31,14 @@ const Sidebar: React.FC = () => {
     <aside className="bg-gradient-to-b from-purple-100 to-purple-200 text-gray-600 p-6 w-64 h-screen flex flex-col justify-between shadow-lg">
       <div>
         <div className="flex items-center gap-2 mb-10">
-          <span className="text-2xl text-purple-500">✴️</span>
-          <span className="text-2xl font-bold text-purple-700">StudySync</span>
+          {/* <Home size={28} className="text-purple-500" />   */}
+          <span className="text-2xl font-bold text-purple-700">StudyBuddy</span>
         </div>
         <nav className="flex flex-col gap-2">
           {menuItems.map((item) => (
             <div
               key={item.label}
-              className={`flex items-center gap-3 py-2 px-4 rounded-lg cursor-pointer transition 
-                ${item.active ? "bg-white text-purple-600 font-semibold shadow" : "hover:bg-purple-100"}
-                ${item.active ? "shadow-md" : ""}
-              `}
+              className={`flex items-center gap-3 py-2 px-4 rounded-lg cursor-pointer transition hover:bg-purple-100`}
             >
               <span className="text-xl">{item.icon}</span>
               <span>{item.label}</span>
